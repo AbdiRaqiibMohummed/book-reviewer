@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Reviews</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+          <a href="/" style="text-decoration: none; color: black;"><div class="logo">BookRead</div></a>
+          <!-- search bar added to search for books on the page -->
+    
+          <nav>
+            <a href="/">Home</a>
+            <a href="/browse">Browse</a>
+            <a href="/contact">Contact</a>
+            <a href="/all-reviews">Reviews</a>
+           <a style="color:#589d50" href="/signin">Register/Login</a>
+          </nav>
+        </header>
+
+        <!-- sub header added for navigation -->
+        <div class="sub-header">
+         
+          <a href="#recentlyAdded">Recently Added</a>
+          <a href="#testimony">Testimony</a>
+          <a href="#about">About</a>
+        </div>
+  
+  
+        <section  class="welcome-section">
+          <div class="welcome-container">
+            <div class="welcome-left-container">
+           
+              <h1>Welcome To BookRead</h1> 
+              <h3>
+                Discover, review, and share your favourite books with a community
+                of passionate readers
+              </h3>
+              <div class="welcome-button-container">
+
+                <a href="/signup"><button class="signUp-button">Sign Up Now</button></a>
+                
+              </div>
+            </div>
+            <div class="welcome-right-container">
+              <img
+                src="https://cdn.prod.website-files.com/661b9e736a74273c4f628d5f/66317f3513e84f90e348e13f_cuantum-technologies-books.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+  
+        <!-- hero section -->
+  
+        <section id="testimony" class="hero-section">
+          <div class="hero-container">
+            <div class="hero">
+              <div class="hero-circle-1">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/14382/14382061.png"
+                  alt=""
+                />
+              </div>
+              <h2>Vast Collection</h2>
+              <p>Browse through thousands of books across all genres</p>
+            </div>
+  
+            <div class="hero">
+              <div class="hero-circle-2">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/14382/14382061.png"
+                  alt=""
+                />
+              </div>
+              <h2>Rate & Review</h2>
+              <p>Browse through thousands of books across all genres</p>
+            </div>
+  
+            <div class="hero">
+              <div class="hero-circle-3">
+                <img
+                  src="https://cdn-icons-png.flaticon.com/128/14382/14382061.png"
+                  alt=""
+                />
+              </div>
+              <h2>Vast Collection</h2>
+              <p>Browse through thousands of books across all genres</p>
+            </div>
+          </div>
+        </section>
+  
+        <!-- Recently Added Section -->
+        <section id="recentlyAdded" class="recently-added-section">
+          <div class="recently-added-container">
+            <div class="recently-added-horizontal">
+              <div class="recently-added-left-container">
+                <h2>Recently Added</h2>
+                <p>Discover the latest additions to our collection</p>
+              </div>
+              <div class="recently-added-right-container">
+                <a href="/browse"><button>View All</button></a>
+              </div>
+            </div>
+            <div class="book-container">
+                {% for book in books %}
+                  <div class="book">
+                    <a href="/book/{{ book.id }}">
+                        <img src="{{ book.cover_url or 'https://cdn-icons-png.flaticon.com/512/578/578666.png' }}"
+     alt="{{ book.title }} cover" />
+
+                      <h3>{{ book.title }}</h3>
+                      <p>{{ book.author }}</p>
+                    </a>
+                  </div>
+                {% endfor %}
+              </div>
+              
+          </div>
+        </section>
+        <!-- add footer here -->
+
+         <footer>
+          <div id="about" class="footer_all">
+        
+            <div class="footer_div">
+              <h2 class="footer_title">Contact Us</h2>
+              <p>Email: <a href="mailto:tester123@gmail.com">tester123@gmail.com</a></p>
+              <p>Phone: (+44) 121 349 3305</p>
+            </div>
+        
+            <div class="footer_div">
+              <h2 class="footer_title">Quick Links</h2>
+              <a href="/">Home</a>
+              <a href="/all-reviews">Reviews</a>
+              <a href="/browse">Browse</a>
+              <a href="/contact">Contact</a>
+            </div>
+        
+            <div class="footer_div">
+              <h2 class="footer_title">About</h2>
+              <p>BookReviewer is your trusted platform for discovering, reviewing, and sharing books with a passionate community.</p>
+            </div>
+        
+          </div>
+        
+          <div class="footer_bottom">
+            <p>© 2026 BookReviewer. All rights reserved.</p>
+          </div>
+        </footer>
+
+
+      </div>
+    </body>
+
+
+</body>
+</html>

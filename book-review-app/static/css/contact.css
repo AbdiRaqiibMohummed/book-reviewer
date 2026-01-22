@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+     }
+     /* NAVBAR */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 40px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .logo {
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .nav-links a {
+        margin-left: 25px;
+        text-decoration: none;
+
+    }
+    
+    .btn-signin {
+        background: #6bb15d;
+        color: #fff !important;
+        padding: 8px 18px;
+        border-radius: 20px;
+    }
+    .logo {
+    font-weight: bold;
+    font-size: 20px;
+     }
+  
+     .nav-links a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #111;
+     }
+
+     .btn-signin {
+    background: #6bb15d;
+    color: #fff !important;
+    padding: 8px 18px;
+    border-radius: 20px;
+    }
+
+    .contact_main {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    }
+
+    .contact_title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    }
+
+    .contact_subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    }
+
+    .contact_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    }
+
+    .form_group {
+    display: flex;
+    flex-direction: column;
+    }
+
+    .form_group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+    }
+
+    .form_group input,
+    .form_group textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    }
+
+    .form_group input:focus,
+    .form_group textarea:focus {
+    outline: none;
+    border-color: #5a67d8;
+    }
+
+    .contact_btn {
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #589d50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    }
+
+    .contact_btn:hover {
+    background-color: #488242;
+    }
+
+    /*Footer*/
+
+   
+footer {
+    background-color: #589d50;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer_all {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .footer_div {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .footer_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer_div p,
+  .footer_div a {
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .footer_div a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  .footer_bottom {
+    text-align: center;
+    margin-top: 30px;
+  
+    padding-top: 15px;
+    font-size: 13px;
+    color: #ffffff;
+  }

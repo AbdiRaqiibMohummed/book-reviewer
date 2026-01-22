@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>All Reviews</title>
+    <link rel="stylesheet" href="../static/css/all-reviews.css" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/reviews.css') }}"
+    />
+  </head>
+  <body>
+
+
+    
+    <nav class="navbar">
+      <a href="/" class="logo">Book Read</a>
+      <div class="navigation-right">
+        <a href="/">Home</a>
+        <a href="/browse">Browse</a>
+        <a href="/contact">Contact</a>
+        <a href="/all-reviews">Reviews</a>
+       <a style="color:#589d50" href="/signin">Register/Login</a>
+      </div>
+    </nav>
+
+    <hr style="border: 1px solid rgba(0, 128, 0, 0.189); width: 100%;">
+
+
+    <!-- a future additon could be a filter system that would filter all the books  -->
+
+    <main class="container">
+      <h1>All Book Reviews</h1>
+
+      {% if reviews %}
+      <ul class="reviews-list">
+        {% for r in reviews %}
+        <li class="review-card">
+          <h3>
+            <a href="/book/{{ r.book_id }}"> {{ r.book_title }} </a>
+          </h3>
+          <p class="author">by {{ r.book_author }}</p>
+
+          <p class="rating">✦{{ r.rating }}</p>
+
+          <p class="comment">“{{ r.comment }}”</p>
+
+          <p class="reviewer">
+            Reviewed by <strong>{{ r.reviewer_name }}</strong>
+          </p>
+        </li>
+        {% endfor %}
+      </ul>
+      {% else %}
+      <p>No reviews found.</p>
+      {% endif %}
+    </main>
+    <footer>
+      <div class="footer_all">
+    
+        <div class="footer_div">
+          <h2 class="footer_title">Contact Us</h2>
+          <p>Email: <a href="mailto:tester123@gmail.com">tester123@gmail.com</a></p>
+          <p>Phone: (+44) 121 349 3305</p>
+        </div>
+    
+        <div class="footer_div">
+          <h2 class="footer_title">Quick Links</h2>
+          <a href="/">Home</a>
+          <a href="/all-reviews">Reviews</a>
+          <a href="/browse">Browse</a>
+          <a href="/contact">Contact</a>
+        </div>
+    
+        <div class="footer_div">
+          <h2 class="footer_title">About</h2>
+          <p>BookReviewer is your trusted platform for discovering, reviewing, and sharing books with a passionate community.</p>
+        </div>
+    
+      </div>
+    
+      <div class="footer_bottom">
+        <p>© 2026 BookReviewer. All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>

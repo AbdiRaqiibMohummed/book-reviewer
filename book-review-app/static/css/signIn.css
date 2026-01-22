@@ -1,0 +1,208 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page */
+body {
+    background: #f3f3f3;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Wrapper */
+.all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Top Logo Section */
+.main_top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_top img {
+    width: 80px;
+    margin-bottom: 8px;
+}
+
+.main_top_text1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #222;
+}
+
+.main_top_text2 {
+    font-size: 12px;
+    color: #777;
+    margin-top: 2px;
+}
+
+/* Main Card */
+.main {
+    background: #ffffff;
+    width: 480px;
+    padding: 32px 40px 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+/* Titles */
+.main_title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+.main_subtitle {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 22px;
+}
+
+/* Tabs */
+.sign_details {
+    display: flex;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    padding: 2px;
+    margin-bottom: 22px;
+}
+
+.signin,
+.signup {
+    flex: 1;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.signin {
+    background-color: #4f9a3c;
+    color: white;
+}
+
+.signup {
+    color: #555;
+}
+
+.signin_text,
+.signup_text {
+    font-size: 13px;
+}
+
+/* Form */
+form {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #e1e1e1;
+    background: #fafafa;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #4f9a3c;
+    box-shadow: 0 0 0 2px rgba(79, 154, 60, 0.15);
+    background: #fff;
+}
+
+/* Button */
+.signin_button {
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 6px;
+    border: none;
+    background-color: #4f9a3c;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.signin_button:hover {
+    background: #468737;
+}
+
+.signin_button:active {
+    transform: translateY(1px);
+}
+
+
+
+
+/* footer styling */
+
+
+footer {
+    background-color: #589d50;
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer_all {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  .footer_div {
+    flex: 1;
+    min-width: 220px;
+  }
+  
+  .footer_title {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+  
+  .footer_div p,
+  .footer_div a {
+    font-size: 14px;
+    color: #cccccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+  }
+  
+  .footer_div a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  
+  .footer_bottom {
+    text-align: center;
+    margin-top: 30px;
+  
+    padding-top: 15px;
+    font-size: 13px;
+    color: #ffffff;
+  }

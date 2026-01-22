@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+  }
+  
+  .navbar {
+    background-color: white;
+    padding: 15px 30px;
+  
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar .navigation-right a{
+    margin-right:20px ;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+  }
+  
+  .container h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 30px;
+  }
+  
+  .reviews-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .review-card {
+    box-shadow: 1px 3px 4px gray;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border-radius: 6px;
+  }
+  
+  .review-card h3 {
+    margin: 0 0 5px 0;
+  }
+  
+  .review-card h3 a {
+    text-decoration: none;
+    color: #000000;
+  }
+  
+  .author {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .rating {
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+  }
+  
+  .comment {
+    margin-bottom: 12px;
+  }
+  
+  .reviewer {
+    font-size: 13px;
+    color: #444;
+  }
+  
+  /* footer styling */
+
+  /* remember to make changes */
+
+
+footer {
+  background-color: #589d50;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.footer_all {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer_div {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer_title {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer_div p,
+.footer_div a {
+  font-size: 14px;
+  color: #cccccc;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.footer_div a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer_bottom {
+  text-align: center;
+  margin-top: 30px;
+
+  padding-top: 15px;
+  font-size: 13px;
+  color: #ffffff;
+}
