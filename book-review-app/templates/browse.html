@@ -1,72 +1,70 @@
+<!-- this page was created by  -->
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/static/css/style.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-          <a href="/" style="text-decoration: none; color: black;"><div class="logo">BookRead</div></a>
-           <!-- search bar added to search for books on the page -->
-           <div class="search-bar">
-            <input type="text" placeholder="search here..."> 
-                </div>
-          <nav>
-            <a href="/">Home</a>
-            <a href="/browse">Browse</a>
-            <a href="/contact">Contact</a>
-            <a href="/all-reviews">Reviews</a>
-           <a style="color:#589d50" href="/signin">Register/Login</a>
-          </nav>
-        </header>
+      <header>
+        <a href="/" style="text-decoration: none; color: black"
+          ><div class="logo">BookRead</div></a
+        >
+        <!-- search bar added to search for books on the page -->
+        <div class="search-bar">
+          <input type="text" placeholder="search here..." />
+        </div>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/browse">Browse</a>
+          <a href="/contact">Contact</a>
+          <a href="/all-reviews">Reviews</a>
+          <a style="color: #589d50" href="/signin">Register/Login</a>
+        </nav>
+      </header>
 
-        <hr style="border: 1px solid rgba(0, 128, 0, 0.189); width: 100%;">
-          
+      <hr style="border: 1px solid rgba(0, 128, 0, 0.189); width: 100%" />
 
-
-        
-
-
-    <section class="recently-added-section">
+      <section class="recently-added-section">
         <div class="recently-added-container">
           <div class="recently-added-horizontal">
             <div class="recently-added-left-container">
               <h1>Browse All Books</h1>
             </div>
-            <div class="recently-added-right-container">
-       
-            </div>
+            <div class="recently-added-right-container"></div>
           </div>
           <div class="book-container">
-              {% for book in books %}
-                <div class="book">
-                  <a href="/book/{{ book.id }}">
-                      <img src="{{ book.cover_url or 'https://cdn-icons-png.flaticon.com/512/578/578666.png' }}"
-   alt="{{ book.title }} cover" />
+            {% for book in books %}
+            <div class="book">
+              <a href="/book/{{ book.id }}">
+                <img
+                  src="{{ book.cover_url or 'https://cdn-icons-png.flaticon.com/512/578/578666.png' }}"
+                  alt="{{ book.title }} cover"
+                />
 
-                    <h3>{{ book.title }}</h3>
-                    <p>{{ book.author }}</p>
-                  </a>
-                </div>
-              {% endfor %}
+                <h3>{{ book.title }}</h3>
+                <p>{{ book.author }}</p>
+              </a>
             </div>
-            
+            {% endfor %}
+          </div>
         </div>
       </section>
     </div>
-    
+
     <footer>
       <div class="footer_all">
-    
         <div class="footer_div">
           <h2 class="footer_title">Contact Us</h2>
-          <p>Email: <a href="mailto:tester123@gmail.com">tester123@gmail.com</a></p>
+          <p>
+            Email: <a href="mailto:tester123@gmail.com">tester123@gmail.com</a>
+          </p>
           <p>Phone: (+44) 121 349 3305</p>
         </div>
-    
+
         <div class="footer_div">
           <h2 class="footer_title">Quick Links</h2>
           <a href="/">Home</a>
@@ -74,24 +72,19 @@
           <a href="/browse">Browse</a>
           <a href="/contact">Contact</a>
         </div>
-    
+
         <div class="footer_div">
           <h2 class="footer_title">About</h2>
-          <p>BookReviewer is your trusted platform for discovering, reviewing, and sharing books with a passionate community.</p>
+          <p>
+            BookReviewer is your trusted platform for discovering, reviewing,
+            and sharing books with a passionate community.
+          </p>
         </div>
-    
       </div>
-    
+
       <div class="footer_bottom">
         <p>© 2026 BookReviewer. All rights reserved.</p>
       </div>
     </footer>
-
-</div>
-
-    
-</body>
+  </body>
 </html>
-
-
-

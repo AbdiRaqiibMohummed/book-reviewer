@@ -1,3 +1,5 @@
+// this page was created by @abdiraqiibhassan
+
 document.getElementById("reviewForm").addEventListener("submit", async (event) => {
   event.preventDefault();
 

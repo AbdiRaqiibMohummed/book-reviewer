@@ -10,7 +10,6 @@
 - MySQL or MariaDB
 
 
-
 ## Home page where you navigate accross multiple pages
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6221ddc6-9044-4fe9-9647-5eaeb8dce8e6" />
 
@@ -28,6 +27,8 @@
 
 
 ## Setup
+clone repo 
+git clone https://github.com/AbdiRaqiibMohummed/BookReviewNewV1
 
 ```bash
 
@@ -63,3 +64,5 @@ flask run
 venv/
 .env
 __pycache__/
+
+# created by abdiraqiibhassan

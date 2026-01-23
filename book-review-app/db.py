@@ -1,3 +1,5 @@
+# this page was created by @abdiraqiibhassan
+
 import os
 import mysql.connector
 from dotenv import load_dotenv

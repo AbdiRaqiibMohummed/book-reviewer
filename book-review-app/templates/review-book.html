@@ -1,159 +1,101 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ book.title }}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ book.title }}</title>
 
-  <link rel="stylesheet" href="../static/css/review-book.css">
-</head>
-<body>
-
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <a href="/" style="text-decoration: none; color: black;"><div class="logo">Book Read</div></a>
-    <div class="nav-links">
-      <nav>
-        <a href="/">Home</a>
-        <a href="/browse">Browse</a>
-        <a href="/contact">Contact</a>
-        <a href="/all-reviews">Reviews</a>
-       <a style="color:#589d50" href="/signin">Register/Login</a>
-      </nav>
-    </div>
-  </nav>
-
-  <main class="container">
-
-    <section class="book-section">
-
-      <div class="book-cover">
-        <a href="/book/{{ book.id }}">
-          <img src="{{ book.cover_url or 'https://cdn-icons-png.flaticon.com/512/578/578666.png' }}"
-alt="{{ book.title }} cover" />
-</a>
+    <link rel="stylesheet" href="../static/css/review-book.css" />
+  </head>
+  <body>
+    
+    <nav class="navbar">
+      <a href="/" style="text-decoration: none; color: black"
+        ><div class="logo">Book Read</div></a
+      >
+      <div class="nav-links">
+        <nav>
+          <a href="/">Home</a>
+          <a href="/browse">Browse</a>
+          <a href="/contact">Contact</a>
+          <a href="/all-reviews">Reviews</a>
+          <a style="color: #589d50" href="/signin">Register/Login</a>
+        </nav>
       </div>
+    </nav>
 
-
-      <div class="book-details">
-        <h1>{{ book.title }}</h1>
-        <h2>{{ book.author }}</h2>
-
-        <div class="rating">
-          {% for i in range(5) %}
-            <span class="star">☆</span>
-          {% endfor %}
-          <span class="review-count">{{ reviews|length }} Reviews</span>
+    <main class="container">
+      <section class="book-section">
+        <div class="book-cover">
+          <a href="/book/{{ book.id }}">
+            <img
+              src="{{ book.cover_url or 'https://cdn-icons-png.flaticon.com/512/578/578666.png' }}"
+              alt="{{ book.title }} cover"
+            />
+          </a>
         </div>
 
-  
-        <h3>Description</h3>
-        <p class="description">{{ book.description }}</p>
+        <div class="book-details">
+          <h1>{{ book.title }}</h1>
+          <h2>{{ book.author }}</h2>
 
-        <h3>Review Description</h3>
-        <form id="reviewForm" class="review-form">
-          <input type="text" id="name" placeholder="Your name" required>
-          
-          <select id="rating" required>
-            <option value="">Rating</option>
-            <option value="1">1 ✦</option>
-            <option value="2">2 ✦</option>
-            <option value="3">3 ✦</option>
-            <option value="4">4 ✦</option>
-            <option value="5">5 ✦</option>
-          </select>
+          <div class="rating">
+            {% for i in range(5) %}
+            <span class="star">☆</span>
+            {% endfor %}
+            <span class="review-count">{{ reviews|length }} Reviews</span>
+          </div>
 
-          <textarea id="comment" placeholder="Write your review..."></textarea>
+          <h3>Description</h3>
+          <p class="description">{{ book.description }}</p>
 
-          <button type="submit">Submit Review</button>
-        </form>
-      </div>
-    </section>
+          <h3>Review Description</h3>
+          <form id="reviewForm" class="review-form">
+            <input type="text" id="name" placeholder="Your name" required />
 
-    <section class="reviews-section">
-      <h3>Reviews</h3>
+            <select id="rating" required>
+              <option value="">Rating</option>
+              <option value="1">1 ✦</option>
+              <option value="2">2 ✦</option>
+              <option value="3">3 ✦</option>
+              <option value="4">4 ✦</option>
+              <option value="5">5 ✦</option>
+            </select>
 
-      {% if reviews %}
+            <textarea
+              id="comment"
+              placeholder="Write your review..."
+            ></textarea>
+
+            <button type="submit">Submit Review</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="reviews-section">
+        <h3>Reviews</h3>
+
+        {% if reviews %}
         <ul class="reviews-list">
           {% for r in reviews %}
-            <li>
-              <strong>{{ r.reviewer_name }}</strong>
-              <span>⭐ {{ r.rating }}</span>
-              <p>{{ r.comment }}</p>
-            </li>
+          <li>
+            <strong>{{ r.reviewer_name }}</strong>
+            <span>✦ {{ r.rating }}</span>
+            <p>{{ r.comment }}</p>
+          </li>
           {% endfor %}
         </ul>
-      {% else %}
-        <p class="no-reviews">No reviews yet. Be the first to review this book!</p>
-      {% endif %}
-    </section>
+        {% else %}
+        <p class="no-reviews">
+          No reviews yet. Be the first to review this book!
+        </p>
+        {% endif %}
+      </section>
+    </main>
 
-  </main>
-
-  <script>
-    const bookId = "{{ book.id | tojson }}";
-  </script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-
-</body>
+    <script>
+      const bookId = "{{ book.id | tojson }}";
+    </script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/static/css/style.css">
-    <title>{{ book.title }}</title>
-</head>
-<body>
-   
-<h2>{{ book.title }}</h2>
-<p>{{ book.description }}</p>
-
-<h3>Reviews</h3>
-<ul id="reviews">
-  {% for r in reviews %}
-    <li>
-      ⭐ {{ r.rating }} — {{ r.comment }} ({{ r.reviewer_name }})
-    </li>
-  {% endfor %}
-</ul>
-
-<h3>Add Review</h3>
-<form id="reviewForm">
-  <input type="text" id="name" placeholder="Your name" required />
-  <input type="number" id="rating" min="1" max="5" required />
-  <textarea id="comment"></textarea>
-  <button type="submit">Submit</button>
-</form>
-
-<script>
-    const bookId = "{{ book.id | tojson }}";
-  </script>
-  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-  
-</body>
-</html>
- -->

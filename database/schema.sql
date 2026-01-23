@@ -1,3 +1,5 @@
+-- this part was create by @abdiraqiibmohummed and designed by benyaminbansal
+
 -- -- Create database
 -- CREATE DATABASE IF NOT EXISTS book_review
 --   CHARACTER SET utf8mb4
