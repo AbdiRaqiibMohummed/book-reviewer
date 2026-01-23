@@ -27,9 +27,6 @@
 
 
 ## Setup
-clone repo 
-git clone https://github.com/AbdiRaqiibMohummed/BookReviewNewV1
-
 ```bash
 
 1. Create virtual environment
@@ -37,23 +34,23 @@ python3 -m venv venv
 source venv/bin/activate
 
 2. Install Python dependencies
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 3. Create database
-mysql -u root -p < schema.sql
+mysql -u root  < database/schema.sql
 
 4. Environment variables
 
 Create a .env file:
 
 DB_HOST=localhost
-DB_USER=app_user
-DB_PASSWORD=your_password
+DB_USER=root
+DB_PORT=3306
+DB_PASSWORD=
 DB_NAME=book_review
 
 5. Run the app
-flask run  
-# or cd book-review-app and then python3 app.py
+python3 app.py
 
 ---
 ## 6 .gitignore quite important

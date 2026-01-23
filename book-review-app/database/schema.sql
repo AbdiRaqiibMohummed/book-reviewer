@@ -1,11 +1,11 @@
 -- this part was create by @abdiraqiibmohummed and designed by benyaminbansal
 
--- -- Create database
--- CREATE DATABASE IF NOT EXISTS book_review
---   CHARACTER SET utf8mb4
---   COLLATE utf8mb4_general_ci;
+-- Create database
+CREATE DATABASE IF NOT EXISTS book_review
+  CHARACTER SET utf8mb4
+  COLLATE utf8mb4_general_ci;
 
--- USE book_review;
+USE book_review;
 
 -- Books table
 CREATE TABLE IF NOT EXISTS books (

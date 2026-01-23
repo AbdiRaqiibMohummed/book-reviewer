@@ -42,13 +42,9 @@ def signUp():
     return render_template("signup.html")
 
 
-
-
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
-
-
 
 
 @app.route("/book/<int:book_id>")
@@ -127,8 +123,6 @@ def all_reviews():
     conn.close()
 
     return render_template("reviews.html", reviews=reviews)
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
