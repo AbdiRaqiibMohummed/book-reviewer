@@ -62,4 +62,4 @@ venv/
 .env
 __pycache__/
 
-# created by abdiraqiibhassan
+# created by @AbdiRaqiibMohummed

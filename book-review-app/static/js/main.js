@@ -1,4 +1,6 @@
 // this page was created by @abdiraqiibhassan
+//This JavaScript code handles the review form submission by validating user input, sending the review data to the backend via a POST request, 
+// and refreshing the page after a successful submission
 
 document.getElementById("reviewForm").addEventListener("submit", async (event) => {
   event.preventDefault();
