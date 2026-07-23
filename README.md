@@ -1,65 +1,70 @@
-## Welcome to Book Review Website 
-- Make local reviews
-- Browse catalogs
-- Store reviews
-- Future implementation "registration"
+BookRead
 
+A book review website where users can:
+
+- Write local book reviews
+- Browse the book catalogue
+- Store reviews in a database
+- Register for an account *(planned feature)*
 
 ## Requirements
-- Python 3.10+
+
+- Python 3.10 or newer
 - MySQL or MariaDB
 
-
-## Home page where you navigate accross multiple pages
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/6221ddc6-9044-4fe9-9647-5eaeb8dce8e6" />
-
-## Browse page to either search or browse various books
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/1c368a94-eee0-4a98-bf92-9fb0a473ed32" />
-
-## Review a book page by clicking on any book
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/37bfb388-12e7-44cf-9f46-dc3458ef2367" />
-
-## All reviews made but in the future will only show the ones you bookmarked 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adc643c8-01e0-48b8-954d-f8ed15936155" />
-
-## Login and signup pages for users and admins aswell as moderators to use in the future currently not working 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/2597f528-cfb8-424e-8780-7bdf046913a5" />
-
-
 ## Setup
-```bash
 
-1. Create virtual environment
+### 1. Create a virtual environment
+
+```bash
 python3 -m venv venv
 source venv/bin/activate
+```
 
-2. Install Python dependencies
+### 2. Install dependencies
+
+```bash
 pip3 install -r requirements.txt
+```
 
-3. Create database
-mysql -u root  < database/schema.sql
+### 3. Create the database
 
-4. Environment variables
+```bash
+mysql -u root < database/schema.sql
+```
 
-Create a .env file:
+### 4. Create environment variables
 
+Create a `.env` file in the project root:
+
+```env
 DB_HOST=localhost
 DB_USER=root
 DB_PORT=3306
 DB_PASSWORD=
 DB_NAME=book_review
+```
 
-5. Run the app
+Update these values to match your local database configuration.
+
+### 5. Run the application
+
+```bash
 python3 app.py
+```
 
----
-## 6 .gitignore quite important
+## `.gitignore`
 
- **`.gitignore`**
+Create a `.gitignore` file in the project root so that virtual environments,
+environment variables, and Python cache files are not committed:
 
 ```gitignore
 venv/
 .env
 __pycache__/
+*.py[cod]
+```
 
-# created by @AbdiRaqiibMohummed
+## Author
+
+Created by [@AbdiRaqiibMohummed](https://github.com/AbdiRaqiibMohummed).
